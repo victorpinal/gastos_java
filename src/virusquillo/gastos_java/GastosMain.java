@@ -13,7 +13,7 @@ public class GastosMain {
 	public GastosMain() {
 		try {
 			StringBuffer str = new StringBuffer();
-			ResultSet res = sql._select("SELECT * FROM movimientos m inner join conceptos c on m.idconcepto=c.idconceptos inner join tarjetas t on m.idtarjeta=t.idtarjetas ORDER BY m.fecha DESC;", null);
+			ResultSet res = sql._select("SELECT * FROM movimientos m inner join conceptos c on m.idconcepto=c.idconceptos inner join tarjetas t on m.idtarjeta=t.idtarjetas ORDER BY m.fecha DESC;");
 			while (res.next()) {
 				str.append(String.format("TARJETA [%s]:\n", res.getString("t.nombre")));	
 				
